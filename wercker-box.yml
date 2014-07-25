@@ -13,7 +13,7 @@ packages:
     - grunt-cli
     - karma-cli
 script: |
-    sudo apt-get install -y python-software-properties python g++ make
+    sudo apt-get install -y python-software-properties python g++
     sudo add-apt-repository -y ppa:chris-lea/node.js
     sudo apt-get update -y
     sudo apt-get install -y nodejs
