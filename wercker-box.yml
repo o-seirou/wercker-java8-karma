@@ -1,0 +1,23 @@
+name: java8-karma
+version: 0.0.1
+inherits: mihkels/java8-oracle@0.0.1
+type: service
+platform: ubuntu@12.04
+description: wercker box for Oracle java8 and karma(Javascript test runner)
+keywords:
+    - Java8
+    - Karma
+packages:
+    - java8
+    - node.js
+    - grunt-cli
+    - karma-cli
+script: |
+    sudo apt-get install -y python-software-properties
+    sudo add-apt-repository ppa:chris-lea/node.js
+    sudo apt-get update -y
+    sudo apt-get install -y nodejs npm
+    sudo npm install -g grunt-cli karma-cli
+env:
+    SBT_OPTS: '-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M'
+    IVY_CACHE_DIR: '"$WERCKER_CACHE_DIR/ivy"'
