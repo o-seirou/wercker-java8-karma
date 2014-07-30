@@ -1,7 +1,7 @@
 name: java8-karma
 version: 0.0.1
 inherits: mihkels/java8-oracle@0.0.1
-type: service
+type: main
 platform: ubuntu@12.04
 description: wercker box for Oracle java8 and karma(Javascript test runner)
 keywords:
