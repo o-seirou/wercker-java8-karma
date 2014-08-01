@@ -1,5 +1,5 @@
 name: java8-karma
-version: 0.0.2
+version: 0.0.3
 inherits: mihkels/java8-oracle@0.0.1
 type: main
 platform: ubuntu@12.04
@@ -21,3 +21,4 @@ script: |
 env:
     SBT_OPTS: '-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M'
     IVY_CACHE_DIR: '"$WERCKER_CACHE_DIR/ivy"'
+    SBT_GLOBAL: '"$WERCKER_CACHE_DIR/sbt"'
